@@ -14,7 +14,7 @@ mod_top_ui_ui <- function(id){
       sidebar_collapsed = TRUE,
       sidebar_mini = FALSE,
       body = bs4Dash::bs4DashBody(
-        fresh::use_theme(create_theme_css()),
+        fresh::use_theme(hamiltonCovid19::theme_bs4Dash()),
         bs4Dash::bs4Box(
           width = 12,
           fluidRow(
