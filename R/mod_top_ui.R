@@ -64,20 +64,20 @@ mod_top_ui_ui <- function(id){
             align = 'center',
             bs4Dash::column(
               width = 4,
-              HTML("<div style='font-size:26px;'><h2 style='font-weight:600;font-size:32px;'>10%</h2> chance it will be extinct by...</div>"),
+              HTML("<div style='font-size:26px;color:black;'><h2 style='font-weight:600;font-size:32px;'>10%</h2> chance it will be extinct by...</div>"),
               br(),
               imageOutput(ns("chance10")) %>% with_load_spinner()
             ),
             bs4Dash::column(
               width = 4,
-              HTML("<div style='font-size:26px;'><h2 style='font-weight:600;font-size:32px;'>50%</h2> chance it will be extinct by...</div>"),
+              HTML("<div style='font-size:26px;color:black;'><h2 style='font-weight:600;font-size:32px;'>50%</h2> chance it will be extinct by...</div>"),
               br(),
               imageOutput(ns("chance50")) %>% with_load_spinner()
             ),
             
             bs4Dash::column(
               width = 4,
-              HTML("<div style='font-size:26px;'><h2 style='font-weight:600;font-size:32px;'>90%</h2> chance it will be extinct by...</div>"),
+              HTML("<div style='font-size:26px;color:black;'><h2 style='font-weight:600;font-size:32px;'>90%</h2> chance it will be extinct by...</div>"),
               br(),
               imageOutput(ns("chance90")) %>%  with_load_spinner()
             )

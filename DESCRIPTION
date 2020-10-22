@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "your@email.com")
 Description: What the package does (one paragraph).
-License: What license is it under?
+License: MIT + file LICENSE
 Imports: 
     config,
     golem,
@@ -19,9 +19,13 @@ Imports:
     bs4Dash,
     magrittr,
     fresh,
-    hamiltonCovid19 (>= 0.0.0.9000)
+    hamiltonCovid19 (>= 0.0.0.9000),
+    colorspace,
+    magick,
+    shinyWidgets,
+    shinycssloaders
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.0
-Remotes:  
+RoxygenNote: 7.1.1
+Remotes: 
     curso-r/hamiltonCovid19

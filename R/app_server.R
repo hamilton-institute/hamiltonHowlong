@@ -6,14 +6,14 @@
 #' @noRd
 app_server <- function( input, output, session ) {
   # List the first level callModules here
-  callModule(
-    mod_side_ui_server,
-    "side_ui"
-  )
-  
   # callModule(
-  #   mod_top_ui_server,
-  #   "top_ui"
+  #   mod_side_ui_server,
+  #   "side_ui"
   # )
+  
+  callModule(
+    mod_top_ui_server,
+    "top_ui"
+  )
 
 }

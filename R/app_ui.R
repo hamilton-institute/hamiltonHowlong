@@ -9,8 +9,8 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # List the first level UI elements here 
-    mod_side_ui_ui("side_ui")
-    #mod_top_ui_ui("top_ui")
+    #mod_side_ui_ui("side_ui")
+    mod_top_ui_ui("top_ui")
   )
 
     
