@@ -9,7 +9,6 @@ def emulator(argv):
     model = ExtraTreesRegressor()
     args = sys.argv
     L = []
-    print(argv[1])
     for i in range(1,len(argv)):
         L.append(float(argv[i]))           
     X_test=np.array([L])
@@ -33,7 +32,7 @@ def emulator(argv):
                             'q75':np.round(ypred[: ,4],3),   
                            'q90': np.round(ypred[: ,5],3), 
                              'q95':np.round(ypred[: ,6] ,3)})    
-    print( data)
+    return( data)
     
-if __name__ == "__main__":
-    emulator(sys.argv)
+# if __name__ == "__main__":
+#     emulator(sys.argv)
