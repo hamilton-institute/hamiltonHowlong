@@ -15,49 +15,46 @@ mod_top_ui_ui <- function(id){
       sidebar_mini = FALSE,
       body = bs4Dash::bs4DashBody(
         fresh::use_theme(hamiltonCovid19::theme_bs4Dash()),
-        bs4Dash::bs4Box(
-          width = 12,
-          fluidRow(
-            bs4Dash::column(
-              width = 3,
-              shinyWidgets::setSliderColor(c(rep("#b2df8a", 3)), sliderId=c(8,9,10)),
-              # Input: Selector for choosing dataset ----
-              sliderInput(
-                ns("R0"),
-                "R0 - average number of infected people for each infected person",
-                0.1,
-                6,
-                1.5,
-                step=0.1
-              )
-            ),
-            bs4Dash::column(
-              width = 3,
-              numericInput(
-                inputId = ns("exp"),
-                label = "Current number of non-symptomatic spreaders",
-                min = 1,
-                max = 1e5,
-                value = 2000)
-            ),
-            bs4Dash::column(
-              width = 3,
-              numericInput(
-                inputId = ns("inf"),
-                label = "Current number of symptomatic infected cases\n",
-                min = 1,
-                max = 1e5,
-                value = 2000)
-            ),
-            bs4Dash::column(
-              width = 3,
-              numericInput(
-                inputId = ns("rec"),
-                label = "Current total of immune/recovered/dead",
-                min = 1,
-                max = 1e6,
-                value = 300000)
+        br(),
+        fluidRow(
+          bs4Dash::column(
+            width = 3,
+            # Input: Selector for choosing dataset ----
+            sliderInput(
+              ns("R0"),
+              "R0 - average number of infected people for each infected person",
+              0.1,
+              6,
+              1.5,
+              step=0.1
             )
+          ),
+          bs4Dash::column(
+            width = 3,
+            numericInput(
+              inputId = ns("exp"),
+              label = "Current number of non-symptomatic spreaders",
+              min = 1,
+              max = 1e5,
+              value = 2000)
+          ),
+          bs4Dash::column(
+            width = 3,
+            numericInput(
+              inputId = ns("inf"),
+              label = "Current number of symptomatic infected cases\n",
+              min = 1,
+              max = 1e5,
+              value = 2000)
+          ),
+          bs4Dash::column(
+            width = 3,
+            numericInput(
+              inputId = ns("rec"),
+              label = "Current total of immune/recovered/dead",
+              min = 1,
+              max = 1e6,
+              value = 300000)
           ),
           hr(),
           fluidRow(
@@ -66,20 +63,20 @@ mod_top_ui_ui <- function(id){
               width = 4,
               HTML("<div style='font-size:26px;color:black;'><h2 style='font-weight:600;font-size:32px;'>10%</h2> chance it will be extinct by...</div>"),
               br(),
-              imageOutput(ns("chance10")) %>% with_load_spinner()
+              imageOutput(ns("chance10")) %>% hamiltonCovid19::with_load_spinner()
             ),
             bs4Dash::column(
               width = 4,
               HTML("<div style='font-size:26px;color:black;'><h2 style='font-weight:600;font-size:32px;'>50%</h2> chance it will be extinct by...</div>"),
               br(),
-              imageOutput(ns("chance50")) %>% with_load_spinner()
+              imageOutput(ns("chance50")) %>% hamiltonCovid19::with_load_spinner()
             ),
             
             bs4Dash::column(
               width = 4,
               HTML("<div style='font-size:26px;color:black;'><h2 style='font-weight:600;font-size:32px;'>90%</h2> chance it will be extinct by...</div>"),
               br(),
-              imageOutput(ns("chance90")) %>%  with_load_spinner()
+              imageOutput(ns("chance90")) %>%  hamiltonCovid19::with_load_spinner()
             )
           )
         )
