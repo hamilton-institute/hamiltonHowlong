@@ -14,7 +14,7 @@ mod_top_ui_ui <- function(id){
       sidebar_collapsed = TRUE,
       sidebar_mini = FALSE,
       body = bs4Dash::bs4DashBody(
-        fresh::use_theme(hamiltonCovid19::theme_bs4Dash()),
+        hamiltonThemes::use_bs4Dash_distill_theme(),
         br(),
         fluidRow(
           bs4Dash::column(
@@ -63,22 +63,23 @@ mod_top_ui_ui <- function(id){
               width = 4,
               HTML("<div style='font-size:26px;color:black;'><h2 style='font-weight:600;font-size:32px;'>10%</h2> chance it will be extinct by...</div>"),
               br(),
-              imageOutput(ns("chance10")) %>% hamiltonCovid19::with_load_spinner()
+              imageOutput(ns("chance10")) %>% hamiltonThemes::distill_load_spinner()
             ),
             bs4Dash::column(
               width = 4,
               HTML("<div style='font-size:26px;color:black;'><h2 style='font-weight:600;font-size:32px;'>50%</h2> chance it will be extinct by...</div>"),
               br(),
-              imageOutput(ns("chance50")) %>% hamiltonCovid19::with_load_spinner()
+              imageOutput(ns("chance50")) %>% hamiltonThemes::distill_load_spinner()
             ),
             
             bs4Dash::column(
               width = 4,
               HTML("<div style='font-size:26px;color:black;'><h2 style='font-weight:600;font-size:32px;'>90%</h2> chance it will be extinct by...</div>"),
               br(),
-              imageOutput(ns("chance90")) %>%  hamiltonCovid19::with_load_spinner()
+              imageOutput(ns("chance90")) %>%  hamiltonThemes::distill_load_spinner()
             )
-          )
+          ),
+          hamiltonThemes:::bs4dash_distill_footer()
         )
       )
     )

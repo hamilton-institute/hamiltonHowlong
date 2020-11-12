@@ -19,7 +19,6 @@ Imports:
     bs4Dash,
     magrittr,
     fresh,
-    hamiltonCovid19 (>= 0.0.0.9000),
     colorspace,
     magick,
     shinyWidgets,
@@ -28,9 +27,10 @@ Imports:
     reticulate,
     dplyr,
     tibble,
-    tidyr
+    tidyr,
+    hamiltonThemes (>= 0.0.0.9000)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
-Remotes: 
-    curso-r/hamiltonCovid19
+Remotes:  
+    hamilton-institute/hamiltonThemes
