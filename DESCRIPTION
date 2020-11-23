@@ -1,11 +1,11 @@
 Package: hamiltonHowlong
-Title: An Amazing Shiny App
+Title: How long app
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "firstname",
-           family = "lastname",
+    person(given = "Hamilton",
+           family = "Institute",
            role = c("aut", "cre"),
-           email = "your@email.com")
+           email = "andrew.parnell@mu.ie")
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Imports: 
@@ -33,4 +33,5 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
 Remotes:  
-    hamilton-institute/hamiltonThemes
+    - hamilton-institute/hamiltonThemes
+    
