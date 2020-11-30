@@ -36,7 +36,7 @@ mod_top_ui_ui <- function(id){
               label = "Current number of non-symptomatic spreaders",
               min = 1,
               max = 1e5,
-              value = 2000)
+              value = 5235)
           ),
           bs4Dash::column(
             width = 3,
@@ -45,7 +45,7 @@ mod_top_ui_ui <- function(id){
               label = "Current number of symptomatic infected cases\n",
               min = 1,
               max = 1e5,
-              value = 2000)
+              value = 5235)
           ),
           bs4Dash::column(
             width = 3,
@@ -78,9 +78,9 @@ mod_top_ui_ui <- function(id){
               br(),
               imageOutput(ns("chance90")) %>%  hamiltonThemes::distill_load_spinner()
             )
-          ),
-          hamiltonThemes:::bs4dash_distill_footer()
-        )
+          )
+        ),
+        hamiltonThemes:::bs4dash_distill_footer()
       )
     )
  
