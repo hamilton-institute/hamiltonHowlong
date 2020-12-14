@@ -33,6 +33,7 @@ jobs:
           Rscript -e 'install.packages("rsconnect")'
           Rscript -e 'install.packages("remotes")'
           Rscript -e 'install.packages("dplyr")'
+          Rscript -e 'install.packages("RcppRoll")'
           Rscript -e 'install.packages("usethis", dependencies = TRUE)'
       - name: Update the dataset and deploy
         run: |
