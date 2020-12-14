@@ -1,6 +1,7 @@
 ## code to prepare `latest_14` dataset goes here
 # Get latest 14-day cases and use as input 
 library(dplyr)
+load("data/latest_14.rda")
 latest_irish_data = read.csv("https://opendata.arcgis.com/datasets/d8eb52d56273413b84b0187a4e9117be_0.csv") %>% 
   mutate(Date = as.Date(Date)) %>% 
   arrange(Date) %>% 
