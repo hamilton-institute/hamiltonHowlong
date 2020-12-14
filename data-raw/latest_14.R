@@ -9,5 +9,12 @@ latest_irish_data = read.csv("https://opendata.arcgis.com/datasets/d8eb52d562734
                            fill = 0)) %>% 
   ungroup() %>% 
   arrange(desc(Date))
-latest_14 = latest_irish_data$last14[1]
-usethis::use_data(latest_14, overwrite = TRUE)
+latest = latest_irish_data$last14[1]
+if (identical(latest_14, latest)) {
+  usethis::ui_done("Nothing to update")
+  deploy_app <- 0
+} else{
+  usethis::use_data(latest_14, overwrite = TRUE)
+  usethis::ui_done("dataset updated!")
+  deploy_app <- 1
+}
