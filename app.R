@@ -5,12 +5,13 @@
 options("golem.app.prod" = TRUE)
 
 reticulate::virtualenv_create(
-  envname = 'python3_env'
+  envname = 'python3_env', python = "python3"
 )
 
 reticulate::virtualenv_install(
   envname = 'python3_env',
-  packages = c('numpy', 'pandas', 'sklearn')
+  packages = c('numpy', 'pandas', 'sklearn'),
+  ignore_installed = TRUE
 )
 
 reticulate::use_virtualenv('python3_env', required = TRUE)

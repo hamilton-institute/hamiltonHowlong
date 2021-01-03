@@ -44,7 +44,6 @@ golem_add_external_resources <- function(){
     # for example, you can add shinyalert::useShinyalert() 
   )
   tags$head(
-    favicon(),
     bundle_resources(
       path = system.file("distill", package = "hamiltonThemes"),
       app_title = 'hamiltonSEIRsimulation'
